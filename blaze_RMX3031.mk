@@ -22,14 +22,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3031/device.mk)
 
 # Inherit some common Pixel-Experience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_RMX3031
+PRODUCT_NAME := blaze_RMX3031
 PRODUCT_DEVICE := RMX3031
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme X7 Max 5G
 PRODUCT_MANUFACTURER := realme
+
+# Aosp shit
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USE_PIXEL_CHARGER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+EXTRA_UDFPS_ANIMATIONS := true
+WITH_GAPPS := true
+TARGET_HAS_UDFPS := true
 
 # Build info
 BUILD_FINGERPRINT := "realme/RMX3031/RMX3031L1:12/SP1A.210812.016/R.202206242313:user/release-keys"

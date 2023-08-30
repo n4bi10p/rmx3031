@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_RMX3031.mk
+    $(LOCAL_DIR)/blaze_RMX3031.mk
+
+COMMON_LUNCH_CHOICES := \
+    blaze_RMX3031-user \
+    blaze_RMX3031-userdebug \
+    blaze_RMX3031-eng
